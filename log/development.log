@@ -1,0 +1,382 @@
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (5.3ms)[0m   [0;1mCREATE TABLE schema_migrations ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (3.4ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (4.6ms)[0m   [0;1mCREATE TABLE precincts ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: function addgeometrycolumn(unknown, unknown, integer, unknown, integer) does not exist
+LINE 1: SELECT AddGeometryColumn('precincts','geom',123,'POLYGON',2)...
+ ^
+HINT: No function matches the given name and argument types. You might need to add explicit type casts.
+: SELECT AddGeometryColumn('precincts','geom',123,'POLYGON',2);ALTER TABLE precincts ALTER geom SET NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (4.9ms)[0m   [0;1mCREATE TABLE precincts ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: permission denied for relation spatial_ref_sys
+CONTEXT: SQL statement "SELECT SRID FROM spatial_ref_sys WHERE SRID = $1 "
+PL/pgSQL function "addgeometrycolumn" line 74 at SQL statement
+SQL statement "SELECT AddGeometryColumn('','', $1 , $2 , $3 , $4 , $5 )"
+PL/pgSQL function "addgeometrycolumn" line 5 at SQL statement
+: SELECT AddGeometryColumn('precincts','geom',123,'POLYGON',2);ALTER TABLE precincts ALTER geom SET NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (4.8ms)[0m   [0;1mCREATE TABLE precincts ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: permission denied for relation spatial_ref_sys
+CONTEXT: SQL statement "SELECT SRID FROM spatial_ref_sys WHERE SRID = $1 "
+PL/pgSQL function "addgeometrycolumn" line 74 at SQL statement
+SQL statement "SELECT AddGeometryColumn('','', $1 , $2 , $3 , $4 , $5 )"
+PL/pgSQL function "addgeometrycolumn" line 5 at SQL statement
+: SELECT AddGeometryColumn('precincts','geom',123,'POLYGON',2);ALTER TABLE precincts ALTER geom SET NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mCREATE TABLE schema_migrations ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (2.4ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (4.8ms)[0m   [0;1mCREATE TABLE precincts ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: function addgeometrycolumn(unknown, unknown, integer, unknown, integer) does not exist
+LINE 1: SELECT AddGeometryColumn('precincts','geom',123,'POLYGON',2)...
+ ^
+HINT: No function matches the given name and argument types. You might need to add explicit type casts.
+: SELECT AddGeometryColumn('precincts','geom',123,'POLYGON',2);ALTER TABLE precincts ALTER geom SET NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (4.9ms)[0m   [0;1mCREATE TABLE precincts ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: permission denied for relation spatial_ref_sys
+CONTEXT: SQL statement "SELECT SRID FROM spatial_ref_sys WHERE SRID = $1 "
+PL/pgSQL function "addgeometrycolumn" line 74 at SQL statement
+SQL statement "SELECT AddGeometryColumn('','', $1 , $2 , $3 , $4 , $5 )"
+PL/pgSQL function "addgeometrycolumn" line 5 at SQL statement
+: SELECT AddGeometryColumn('precincts','geom',123,'POLYGON',2);ALTER TABLE precincts ALTER geom SET NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (4.9ms)[0m   [0;1mCREATE TABLE precincts ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: AddGeometryColumns() - invalid SRID
+CONTEXT: SQL statement "SELECT AddGeometryColumn('','', $1 , $2 , $3 , $4 , $5 )"
+PL/pgSQL function "addgeometrycolumn" line 5 at SQL statement
+: SELECT AddGeometryColumn('precincts','geom',123,'POLYGON',2);ALTER TABLE precincts ALTER geom SET NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mCREATE TABLE precincts ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: AddGeometryColumns() - invalid SRID
+CONTEXT: SQL statement "SELECT AddGeometryColumn('','', $1 , $2 , $3 , $4 , $5 )"
+PL/pgSQL function "addgeometrycolumn" line 5 at SQL statement
+: SELECT AddGeometryColumn('precincts','geom',4326,'POLYGON',2);ALTER TABLE precincts ALTER geom SET NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCREATE TABLE precincts ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: syntax error at or near ";"
+LINE 1: SELECT AddGeometryColumn('precincts','geom',4326;POINT(-71.2...
+ ^
+: SELECT AddGeometryColumn('precincts','geom',4326;POINT(-71.270199 46.782536),'POLYGON',2);ALTER TABLE precincts ALTER geom SET NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (4.8ms)[0m   [0;1mCREATE TABLE precincts ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: syntax error at or near "46.782536"
+LINE 1: ...eometryColumn('precincts','geom',POINT(-71.270199 46.782536)...
+ ^
+: SELECT AddGeometryColumn('precincts','geom',POINT(-71.270199 46.782536),'POLYGON',2);ALTER TABLE precincts ALTER geom SET NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (4.8ms)[0m   [0;1mCREATE TABLE precincts ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: AddGeometryColumns() - invalid SRID
+CONTEXT: SQL statement "SELECT AddGeometryColumn('','', $1 , $2 , $3 , $4 , $5 )"
+PL/pgSQL function "addgeometrycolumn" line 5 at SQL statement
+: SELECT AddGeometryColumn('precincts','geom',4326,'POLYGON',2);ALTER TABLE precincts ALTER geom SET NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (27.2ms)[0m   [0;1mCREATE TABLE precincts ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: AddGeometryColumns() - invalid SRID
+CONTEXT: SQL statement "SELECT AddGeometryColumn('','', $1 , $2 , $3 , $4 , $5 )"
+PL/pgSQL function "addgeometrycolumn" line 5 at SQL statement
+: SELECT AddGeometryColumn('precincts','geom',26986,'POLYGON',2);ALTER TABLE precincts ALTER geom SET NOT NULL[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (10.9ms)[0m   [0;1mCREATE TABLE precincts ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (13.8ms)[0m   [0mSELECT AddGeometryColumn('precincts','geom',26986,'POLYGON',2);ALTER TABLE precincts ALTER geom SET NOT NULL[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100115052821')[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE schema_migrations ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (2.1ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (5.6ms)[0m   [0;1mCREATE TABLE precincts ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (10.5ms)[0m   [0mSELECT AddGeometryColumn('precincts','geom',4326,'POLYGON',2);ALTER TABLE precincts ALTER geom SET NOT NULL[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100115052821')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mDROP TABLE "precincts"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100115052821'[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: relation "precincts" does not exist
+: CREATE INDEX index_precincts_on_geom ON precincts USING GIST (geom GIST_GEOMETRY_OPS)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (7.1ms)[0m   [0;1mCREATE TABLE precincts ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (13.5ms)[0m   [0mSELECT AddGeometryColumn('precincts','geom',4326,'POLYGON',2);ALTER TABLE precincts ALTER geom SET NOT NULL[0m
+  [4;36;1mSQL (3.8ms)[0m   [0;1mCREATE INDEX index_precincts_on_geom ON precincts USING GIST (geom GIST_GEOMETRY_OPS)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100115052821')[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mDROP TABLE "precincts"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100115052821'[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (7.7ms)[0m   [0;1mCREATE TABLE precincts ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (13.3ms)[0m   [0mSELECT AddGeometryColumn('precincts','geom',4326,'POLYGON',2);ALTER TABLE precincts ALTER geom SET NOT NULL[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mCREATE INDEX index_precincts_on_geom ON precincts USING GIST (geom GIST_GEOMETRY_OPS)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100115052821')[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mDROP TABLE "precincts"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100115052821'[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: type "polygo" does not exist
+LINE 1: ...y, "name" character varying(255) NOT NULL, "geom" polygo NOT...
+ ^
+: CREATE TABLE precincts ("id" serial primary key, "name" character varying(255) NOT NULL, "geom" polygo NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (5.7ms)[0m   [0;1mCREATE TABLE precincts ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (10.3ms)[0m   [0mSELECT AddGeometryColumn('precincts','geom',4326,'POLYGON',2);ALTER TABLE precincts ALTER geom SET NOT NULL[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE INDEX index_precincts_on_geom ON precincts USING GIST (geom GIST_GEOMETRY_OPS)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100115052821')[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: new row for relation "precincts" violates check constraint "enforce_srid_geom"
+: INSERT INTO "precincts" ("name", "created_at", "updated_at", "geom") VALUES(E'Triangle Shire', '2010-01-15 06:30:56.968114', '2010-01-15 06:30:56.968114', '0103000020FFFFFFFF0100000001000000000000000000F03F0000000000000040') RETURNING "id"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: new row for relation "precincts" violates check constraint "enforce_srid_geom"
+: INSERT INTO "precincts" ("name", "created_at", "updated_at", "geom") VALUES(E'Triangle Shire', '2010-01-15 06:31:12.119773', '2010-01-15 06:31:12.119773', '0103000020FFFFFFFF0100000003000000000000000000F03F00000000000000400000000000000840000000000000104000000000000014400000000000001840') RETURNING "id"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: new row for relation "precincts" violates check constraint "enforce_srid_geom"
+: INSERT INTO "precincts" ("name", "created_at", "updated_at", "geom") VALUES(E'Triangle Shire', '2010-01-15 06:32:18.813403', '2010-01-15 06:32:18.813403', '0103000020FFFFFFFF01000000030000009A9999999999B93F9A9999999999C93F9A9999999999D93F000000000000E03F666666666666E63F9A9999999999E93F') RETURNING "id"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: new row for relation "precincts" violates check constraint "enforce_srid_geom"
+: INSERT INTO "precincts" ("name", "created_at", "updated_at", "geom") VALUES(E'Triangle Shire', '2010-01-15 06:32:35.868946', '2010-01-15 06:32:35.868946', '0103000020FFFFFFFF01000000030000002D431CEBE2361A3F2D431CEBE2362A3F2D431CEBE2363A3F2D431CEBE2360A3FD2FBC6D79E59123FF168E388B5F8143F') RETURNING "id"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: new row for relation "precincts" violates check constraint "enforce_srid_geom"
+: INSERT INTO "precincts" ("name", "created_at", "updated_at", "geom") VALUES(E'Triangle Shire', '2010-01-15 06:35:28.499500', '2010-01-15 06:35:28.499500', '0103000020FFFFFFFF0100000003000000000000000000594000000000000069400000000000C0724000000000000079400000000000C082400000000000E08540') RETURNING "id"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: new row for relation "precincts" violates check constraint "enforce_srid_geom"
+: INSERT INTO "precincts" ("name", "created_at", "updated_at", "geom") VALUES(E'Triangle Shire', '2010-01-15 06:35:39.277652', '2010-01-15 06:35:39.277652', '0103000020FFFFFFFF010000000100000000000000000059400000000000006940') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: new row for relation "precincts" violates check constraint "enforce_srid_geom"
+: INSERT INTO "precincts" ("name", "created_at", "updated_at", "geom") VALUES(E'Triangle Shire', '2010-01-15 06:35:57.909830', '2010-01-15 06:35:57.909830', '0103000020FFFFFFFF0100000004000000000000000000594000000000000069400000000000C0724000000000000079400000000000C082400000000000E0854000000000000089400000000000208C40') RETURNING "id"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: new row for relation "precincts" violates check constraint "enforce_srid_geom"
+: INSERT INTO "precincts" ("name", "created_at", "updated_at", "geom") VALUES(E'Triangle Shire', '2010-01-15 06:38:41.084175', '2010-01-15 06:38:41.084175', '0103000020FFFFFFFF0300000001000000000000000000F03F000000000000004001000000000000000000084000000000000010400100000000000000000014400000000000001840') RETURNING "id"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: new row for relation "precincts" violates check constraint "enforce_srid_geom"
+: INSERT INTO "precincts" ("name", "created_at", "updated_at", "geom") VALUES(E'Triangle Shire', '2010-01-15 06:38:46.563900', '2010-01-15 06:38:46.563900', '0103000020FFFFFFFF0300000001000000000000000000F03F000000000000004001000000000000000000084000000000000010400100000000000000000014400000000000001840') RETURNING "id"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mDROP TABLE "precincts"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100115052821'[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePrecincts (20100115052821)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (8.4ms)[0m   [0;1mCREATE TABLE precincts ("id" serial primary key, "name" character varying(255) NOT NULL, "created_at" timestamp, "updated_at" timestamp) [0m
+  [4;35;1mSQL (17.8ms)[0m   [0mSELECT AddGeometryColumn('precincts','geom',4326,'POINT',2);ALTER TABLE precincts ALTER geom SET NOT NULL[0m
+  [4;36;1mSQL (4.2ms)[0m   [0;1mCREATE INDEX index_precincts_on_geom ON precincts USING GIST (geom GIST_GEOMETRY_OPS)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100115052821')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: new row for relation "precincts" violates check constraint "enforce_srid_geom"
+: INSERT INTO "precincts" ("name", "created_at", "updated_at", "geom") VALUES(E'Point Shire', '2010-01-15 06:42:23.133795', '2010-01-15 06:42:23.133795', '0101000020FFFFFFFF000000000000F03F0000000000000040') RETURNING "id"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: new row for relation "precincts" violates check constraint "enforce_srid_geom"
+: INSERT INTO "precincts" ("name", "created_at", "updated_at", "geom") VALUES(E'Point Shire', '2010-01-15 06:42:54.477641', '2010-01-15 06:42:54.477641', '0101000020FFFFFFFF9A9999999999F9BF6666666666660640') RETURNING "id"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: new row for relation "precincts" violates check constraint "enforce_srid_geom"
+: INSERT INTO "precincts" ("name", "created_at", "updated_at", "geom") VALUES(E'Point Shire', '2010-01-15 06:43:03.005057', '2010-01-15 06:43:03.005057', '0101000020FFFFFFFF9A9999999999F9BF6666666666660640') RETURNING "id"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: new row for relation "precincts" violates check constraint "enforce_srid_geom"
+: INSERT INTO "precincts" ("name", "created_at", "updated_at", "geom") VALUES(E'Point Shire', '2010-01-15 06:43:23.299169', '2010-01-15 06:43:23.299169', '0101000020FFFFFFFF00000000006AF84000000000006A0841') RETURNING "id"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: new row for relation "precincts" violates check constraint "enforce_srid_geom"
+: INSERT INTO "precincts" ("name", "created_at", "updated_at", "geom") VALUES(E'Point Shire', '2010-01-15 06:43:34.858474', '2010-01-15 06:43:34.858474', '0101000020FFFFFFFF00000000006AF840000000000088D340') RETURNING "id"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: new row for relation "precincts" violates check constraint "enforce_srid_geom"
+: INSERT INTO "precincts" ("name", "created_at", "updated_at", "geom") VALUES(E'Point Shire', '2010-01-15 06:43:38.882958', '2010-01-15 06:43:38.882958', '0101000020FFFFFFFF00000000006AF840000000000088D340') RETURNING "id"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: new row for relation "precincts" violates check constraint "enforce_srid_geom"
+: INSERT INTO "precincts" ("name", "created_at", "updated_at", "geom") VALUES(E'Point Shire', '2010-01-15 06:43:49.235043', '2010-01-15 06:43:49.235043', '0101000020FFFFFFFF00000000006AF840000000000088D340') RETURNING "id"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: new row for relation "precincts" violates check constraint "enforce_srid_geom"
+: INSERT INTO "precincts" ("name", "created_at", "updated_at", "geom") VALUES(E'Point Shire', '2010-01-15 06:44:20.712371', '2010-01-15 06:44:20.712371', '01010000200F120000000000000000F03F0000000000000040') RETURNING "id"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: new row for relation "precincts" violates check constraint "enforce_dims_geom"
+: INSERT INTO "precincts" ("name", "created_at", "updated_at", "geom") VALUES(E'Point Shire', '2010-01-15 06:44:40.455630', '2010-01-15 06:44:40.455630', '01010000A00F120000000000000000F03F00000000000000400000000000000840') RETURNING "id"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: new row for relation "precincts" violates check constraint "enforce_srid_geom"
+: INSERT INTO "precincts" ("name", "created_at", "updated_at", "geom") VALUES(E'Point Shire', '2010-01-15 06:44:52.814338', '2010-01-15 06:44:52.814338', '01010000200F120000000000000000F03F0000000000000040') RETURNING "id"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mINSERT INTO "precincts" ("name", "created_at", "updated_at", "geom") VALUES(E'Point Shire', '2010-01-15 06:45:09.550117', '2010-01-15 06:45:09.550117', '0101000020E6100000000000000000F03F0000000000000040') RETURNING "id"[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
